@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/LCBC-UiO/ggsegDesterieux.svg?branch=master)](https://travis-ci.org/LCBC-UiO/ggsegDesterieux)
+status](https://travis-ci.com/LCBC-UiO/ggsegDesterieux.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegDesterieux)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegDesterieux?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegDesterieux)
 [![Codecov test

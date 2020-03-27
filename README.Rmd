@@ -9,6 +9,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
+  fig.width = 6,
   out.width = "100%"
 )
 devtools::load_all(".")
@@ -17,7 +18,7 @@ devtools::load_all(".")
 # ggsegDesterieux
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/LCBC-UiO/ggsegDesterieux.svg?branch=master)](https://travis-ci.org/LCBC-UiO/ggsegDesterieux)
+[![Travis build status](https://travis-ci.com/LCBC-UiO/ggsegDesterieux.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegDesterieux)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegDesterieux?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegDesterieux)
 [![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux?branch=master)
 <!-- badges: end -->
@@ -32,6 +33,7 @@ You can install the released version version from [GitHub](https://github.com/) 
 # install.packages("remotes")
 remotes::install_github("LCBC-UiO/ggsegDesterieux")
 ```
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
