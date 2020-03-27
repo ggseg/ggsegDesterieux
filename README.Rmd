@@ -25,6 +25,8 @@ devtools::load_all(".")
 
 This package contains dataset for plotting the Desterieux cortical atlas ggseg and ggseg3d. 
 
+Desterieux, Fischl, Dale,& Halgren (2010) Neuroimage. 53(1): 1–15. doi: [0.1016/j.neuroimage.2010.06.010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2937159/)
+
 ## Installation
 
 You can install the released version version from [GitHub](https://github.com/) with:
@@ -41,14 +43,14 @@ This is a basic example which shows you how to solve a common problem:
 library(ggsegDesterieux)
 ```
 
-<!-- ```{r} -->
+<!-- ```{r, fig.height=10} -->
 <!-- library(ggseg) -->
 
 <!-- ggseg(atlas = desterieux, mapping = aes(fill = region)) + -->
-<!--   scale_fill_brain("tracula", package = "ggsegTracula") + -->
-<!--   theme(legend.position = "bottom",  -->
-<!--         legend.text = element_text(size = 9)) + -->
-<!--   guides(fill = guide_legend(ncol = 3)) -->
+<!--   scale_fill_brain("desterieux", package = "ggsegDesterieux") + -->
+<!--   theme(legend.position = "bottom", -->
+<!--         legend.text = element_text(size = 7)) + -->
+<!--   guides(fill = guide_legend(ncol = 2)) -->
 
 <!-- ``` -->
 
@@ -59,18 +61,18 @@ ggseg3d(atlas = desterieux_3d) %>%
   pan_camera("right lateral")
 ```
 
-<!-- ```{r "orca", include=FALSE} -->
-<!-- library(ggseg3d) -->
+```{r "orca", include=FALSE}
+library(ggseg3d)
 
-<!-- p <- ggseg3d(atlas = desterieux_3d) %>% -->
-<!--   pan_camera("right lateral") %>% -->
-<!--   plotly::add_annotations( text="Screen capture", -->
-<!--                   legendtitle=TRUE, showarrow=FALSE, -->
-<!--                   font = list(color = "#000000b4", -->
-<!--                               family = 'sans serif', -->
-<!--                               size = 50)) -->
-<!-- plotly::orca(p, "man/figures/README-3d-plot.png") -->
-<!-- ``` -->
+p <- ggseg3d(atlas = desterieux_3d) %>%
+  pan_camera("right lateral") %>%
+  plotly::add_annotations( text="Screen capture",
+                  legendtitle=TRUE, showarrow=FALSE,
+                  font = list(color = "#000000b4",
+                              family = 'sans serif',
+                              size = 50))
+plotly::orca(p, "man/figures/README-3d-plot.png")
+```
 
 ```{r "incl", echo=FALSE}
 knitr::include_graphics("man/figures/README-3d-plot.png")

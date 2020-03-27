@@ -16,6 +16,9 @@ coverage](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux/branch/master/graph/bad
 This package contains dataset for plotting the Desterieux cortical atlas
 ggseg and ggseg3d.
 
+Desterieux, Fischl, Dale,& Halgren (2010) Neuroimage. 53(1): 1–15. doi:
+[0.1016/j.neuroimage.2010.06.010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2937159/)
+
 ## Installation
 
 You can install the released version version from
@@ -34,19 +37,19 @@ This is a basic example which shows you how to solve a common problem:
 library(ggsegDesterieux)
 ```
 
-<!-- ```{r} -->
+<!-- ```{r, fig.height=10} -->
 
 <!-- library(ggseg) -->
 
 <!-- ggseg(atlas = desterieux, mapping = aes(fill = region)) + -->
 
-<!--   scale_fill_brain("tracula", package = "ggsegTracula") + -->
+<!--   scale_fill_brain("desterieux", package = "ggsegDesterieux") + -->
 
-<!--   theme(legend.position = "bottom",  -->
+<!--   theme(legend.position = "bottom", -->
 
-<!--         legend.text = element_text(size = 9)) + -->
+<!--         legend.text = element_text(size = 7)) + -->
 
-<!--   guides(fill = guide_legend(ncol = 3)) -->
+<!--   guides(fill = guide_legend(ncol = 2)) -->
 
 <!-- ``` -->
 
@@ -56,28 +59,6 @@ library(ggseg3d)
 ggseg3d(atlas = desterieux_3d) %>% 
   pan_camera("right lateral")
 ```
-
-<!-- ```{r "orca", include=FALSE} -->
-
-<!-- library(ggseg3d) -->
-
-<!-- p <- ggseg3d(atlas = desterieux_3d) %>% -->
-
-<!--   pan_camera("right lateral") %>% -->
-
-<!--   plotly::add_annotations( text="Screen capture", -->
-
-<!--                   legendtitle=TRUE, showarrow=FALSE, -->
-
-<!--                   font = list(color = "#000000b4", -->
-
-<!--                               family = 'sans serif', -->
-
-<!--                               size = 50)) -->
-
-<!-- plotly::orca(p, "man/figures/README-3d-plot.png") -->
-
-<!-- ``` -->
 
 <img src="man/figures/README-3d-plot.png" width="100%" />
 
