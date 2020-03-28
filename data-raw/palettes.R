@@ -18,3 +18,8 @@ brain_pals = list(
 )
 usethis::use_data(brain_pals, internal = TRUE, overwrite = TRUE)
 
+
+devtools::load_all("../../ggsegExtra/")
+desterieux_3d <- restruct_old_3datlas(desterieux_3d)
+desterieux_3d <- as_ggseg3d_atlas(desterieux_3d)
+usethis::use_data(desterieux_3d, internal = FALSE, overwrite = TRUE)
