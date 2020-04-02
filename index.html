@@ -73,7 +73,7 @@
 <!-- badges: start -->
 
 <p>This package contains dataset for plotting the Desterieux cortical atlas ggseg and ggseg3d.</p>
-<p>Desterieux, Fischl, Dale,&amp; Halgren (2010) Neuroimage. 53(1): 1–15. doi: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2937159/">0.1016/j.neuroimage.2010.06.010</a></p>
+<p>Desterieux, Fischl, Dale,&amp; Halgren (2010) Neuroimage. 53(1): 1â15. doi: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2937159/">0.1016/j.neuroimage.2010.06.010</a></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -86,20 +86,20 @@
 <a href="#example" class="anchor"></a>Example</h2>
 <p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggsegDesterieux</span>)</pre></div>
-<!-- ```{r, fig.height=10} -->
-<!-- library(ggseg) -->
-<!-- ggseg(atlas = desterieux, mapping = aes(fill = region)) + -->
-<!--   scale_fill_brain("desterieux", package = "ggsegDesterieux") + -->
-<!--   theme(legend.position = "bottom", -->
-<!--         legend.text = element_text(size = 7)) + -->
-<!--   guides(fill = guide_legend(ncol = 2)) -->
-<!-- ``` -->
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggseg3d</span>)
+<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggseg</span>)
+
+<span class="fu"><a href="https://rdrr.io/pkg/ggseg/man/ggseg.html">ggseg</a></span>(<span class="kw">atlas</span> <span class="kw">=</span> <span class="no">desterieux</span>, <span class="kw">mapping</span> <span class="kw">=</span> <span class="fu">aes</span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="no">region</span>)) +
+  <span class="fu"><a href="https://rdrr.io/pkg/ggseg/man/scale_brain.html">scale_fill_brain</a></span>(<span class="st">"desterieux"</span>, <span class="kw">package</span> <span class="kw">=</span> <span class="st">"ggsegDesterieux"</span>) +
+  <span class="fu">theme</span>(<span class="kw">legend.position</span> <span class="kw">=</span> <span class="st">"bottom"</span>,
+        <span class="kw">legend.text</span> <span class="kw">=</span> <span class="fu">element_text</span>(<span class="kw">size</span> <span class="kw">=</span> <span class="fl">7</span>)) +
+  <span class="fu">guides</span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="fu">guide_legend</span>(<span class="kw">ncol</span> <span class="kw">=</span> <span class="fl">3</span>))</pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
+<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggseg3d</span>)
 
 <span class="fu"><a href="https://rdrr.io/pkg/ggseg3d/man/ggseg3d.html">ggseg3d</a></span>(<span class="kw">atlas</span> <span class="kw">=</span> <span class="no">desterieux_3d</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://rdrr.io/pkg/ggseg3d/man/pan_camera.html">pan_camera</a></span>(<span class="st">"right lateral"</span>)</pre></div>
 <p><img src="reference/figures/README-3d-plot.png" width="100%"></p>
-<p>Please note that the ‘ggsegDesterieux’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Please note that the âggsegDesterieuxâ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
   </div>
