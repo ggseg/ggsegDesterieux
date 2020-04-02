@@ -37,21 +37,17 @@ This is a basic example which shows you how to solve a common problem:
 library(ggsegDesterieux)
 ```
 
-<!-- ```{r, fig.height=10} -->
+``` r
+library(ggseg)
 
-<!-- library(ggseg) -->
+ggseg(atlas = desterieux, mapping = aes(fill = region)) +
+  scale_fill_brain("desterieux", package = "ggsegDesterieux") +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7)) +
+  guides(fill = guide_legend(ncol = 3))
+```
 
-<!-- ggseg(atlas = desterieux, mapping = aes(fill = region)) + -->
-
-<!--   scale_fill_brain("desterieux", package = "ggsegDesterieux") + -->
-
-<!--   theme(legend.position = "bottom", -->
-
-<!--         legend.text = element_text(size = 7)) + -->
-
-<!--   guides(fill = guide_legend(ncol = 2)) -->
-
-<!-- ``` -->
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ``` r
 library(ggseg3d)
