@@ -18,14 +18,15 @@ devtools::load_all(".")
 
 
 desterieux <- ggsegExtra::make_ggseg3d_2_ggseg(desterieux_3d,
-                                           steps = 6:7,
+                                           steps = 7,
                                            smoothness = 8,
-                                           keep = 0.02,
-                                           output_dir = "~/Desktop/test/")
+                                           tolerance = .8,
+                                           output_dir = here::here("data-raw"))
 
 # remove name from medial wall
 desterieux <- desterieux %>%
-  mutate(region = ifelse(grepl("wall", region), NA, region))
+  mutate(region = ifelse(grepl("wall", region), NA, region)) %>%
+  as_ggseg_atlas()
 
 ggseg(atlas=desterieux, show.legend = FALSE,
       colour = "black", position="stacked",
