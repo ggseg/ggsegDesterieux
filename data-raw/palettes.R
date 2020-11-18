@@ -1,5 +1,12 @@
 devtools::load_all("../../ggsegExtra/")
 devtools::load_all(".")
+library(dplyr)
+
+desterieux_3d_2 <- make_aparc_2_3datlas(annot = "aparc.a2009s",
+                                        output_dir = "data-raw")
+
+desterieux_3d_2 <- desterieux_3d_2 %>%
+  mutate(atlas = "desterieux_3d")
 
 # Make palette ----
 brain_pals <- make_palette_ggseg(desterieux_3d)
@@ -18,15 +25,10 @@ devtools::load_all(".")
 
 
 desterieux <- ggsegExtra::make_ggseg3d_2_ggseg(desterieux_3d,
-                                           steps = 7,
+                                           steps = 4:7,
                                            smoothness = 8,
                                            tolerance = .8,
                                            output_dir = here::here("data-raw"))
-
-# remove name from medial wall
-desterieux <- desterieux %>%
-  mutate(region = ifelse(grepl("wall", region), NA, region)) %>%
-  as_ggseg_atlas()
 
 ggseg(atlas=desterieux, show.legend = FALSE,
       colour = "black", position="stacked",
@@ -34,6 +36,7 @@ ggseg(atlas=desterieux, show.legend = FALSE,
       mapping = aes(fill=region)) +
   scale_fill_brain("desterieux", package = "ggsegDesterieux")
 
+plot(desterieux)
 
 usethis::use_data(desterieux,
                   internal = FALSE,
