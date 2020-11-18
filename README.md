@@ -40,8 +40,7 @@ library(ggsegDesterieux)
 ``` r
 library(ggseg)
 
-ggseg(atlas = desterieux, mapping = aes(fill = region)) +
-  scale_fill_brain("desterieux", package = "ggsegDesterieux") +
+plot(desterieux) +
   theme(legend.position = "bottom",
         legend.text = element_text(size = 7)) +
   guides(fill = guide_legend(ncol = 3))
