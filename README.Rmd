@@ -13,7 +13,6 @@ knitr::opts_chunk$set(
   out.width = "100%",
   fig.retina = 3
 )
-devtools::load_all(".")
 ```
 
 # ggsegDesterieux
@@ -22,6 +21,7 @@ devtools::load_all(".")
 [![Travis build status](https://travis-ci.com/LCBC-UiO/ggsegDesterieux.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegDesterieux)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegDesterieux?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegDesterieux)
 [![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux?branch=master)
+[![R build status](https://github.com/LCBC-UiO/ggsegDesterieux/workflows/R-CMD-check/badge.svg)](https://github.com/LCBC-UiO/ggsegDesterieux/actions)
 <!-- badges: end -->
 
 This package contains dataset for plotting the Desterieux cortical atlas ggseg and ggseg3d. 
@@ -56,6 +56,7 @@ plot(desterieux) +
 
 ```{r "noneval", eval=FALSE}
 library(ggseg3d)
+library(dplyr)
 
 ggseg3d(atlas = desterieux_3d) %>% 
   pan_camera("right lateral")
@@ -63,6 +64,7 @@ ggseg3d(atlas = desterieux_3d) %>%
 
 ```{r "orca", include=FALSE}
 library(ggseg3d)
+library(dplyr)
 
 p <- ggseg3d(atlas = desterieux_3d) %>%
   pan_camera("right lateral") %>%

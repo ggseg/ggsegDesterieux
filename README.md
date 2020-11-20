@@ -11,6 +11,8 @@ status](https://travis-ci.com/LCBC-UiO/ggsegDesterieux.svg?branch=master)](https
 status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegDesterieux?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegDesterieux)
 [![Codecov test
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux?branch=master)
+[![R build
+status](https://github.com/LCBC-UiO/ggsegDesterieux/workflows/R-CMD-check/badge.svg)](https://github.com/LCBC-UiO/ggsegDesterieux/actions)
 <!-- badges: end -->
 
 This package contains dataset for plotting the Desterieux cortical atlas
@@ -39,6 +41,7 @@ library(ggsegDesterieux)
 
 ``` r
 library(ggseg)
+#> Loading required package: ggplot2
 
 plot(desterieux) +
   theme(legend.position = "bottom",
@@ -50,6 +53,7 @@ plot(desterieux) +
 
 ``` r
 library(ggseg3d)
+library(dplyr)
 
 ggseg3d(atlas = desterieux_3d) %>% 
   pan_camera("right lateral")
