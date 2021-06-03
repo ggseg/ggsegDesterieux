@@ -1,6 +1,6 @@
 Package: ggsegDesterieux
 Title: Desterieux datasets for the ggseg-plotting tool
-Version: 1.0.1.001
+Version: 1.0.1.002
 Authors@R: c(person("Athanasia Mo", "Mowinckel", 
                     email = "a.m.mowinckel@psykologi.uio.no", 
                     role = c("aut", "cre"),
