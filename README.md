@@ -1,14 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegDesterieux
+# ggsegDesterieux <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/LCBC-UiO/ggsegDesterieux.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegDesterieux)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegDesterieux?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegDesterieux)
+[![DOI](https://zenodo.org/badge/250272332.svg)](https://zenodo.org/badge/latestdoi/250272332)
 [![Codecov test
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegDesterieux?branch=master)
 [![R build
@@ -22,6 +19,19 @@ Desterieux, Fischl, Dale,& Halgren (2010) Neuroimage. 53(1): 1–15. doi:
 [0.1016/j.neuroimage.2010.06.010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2937159/)
 
 ## Installation
+
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggsegDesterieux')
+```
 
 You can install the released version version from
 [GitHub](https://github.com/) with:
@@ -41,7 +51,7 @@ library(ggsegDesterieux)
 
 ``` r
 library(ggseg)
-#> Loading required package: ggplot2
+library(ggplot2)
 
 plot(desterieux) +
   theme(legend.position = "bottom",
@@ -49,7 +59,7 @@ plot(desterieux) +
   guides(fill = guide_legend(ncol = 3))
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ``` r
 library(ggseg3d)
